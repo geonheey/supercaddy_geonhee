@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+
+var colorY = Color.fromARGB(255, 255, 227, 108);
+var colorR = Color.fromARGB(255, 255, 136, 113);
+var colorH = Color.fromARGB(255, 255, 255, 255);
+var colorGrey = Color.fromARGB(255, 242, 242, 242);
+var colorB = Color.fromARGB(255, 0, 0, 0);
+var colorGB = Color.fromARGB(255, 207, 207, 207);
+var colorG = Color.fromARGB(255, 250, 250, 250);
+var textcolorG = Color.fromARGB(255, 200, 200, 200);
+var activeNavigationBarColor = Colors.lightGreen;
+var bottomNavigationBarBackgroundColor = Colors.black;
+var notActiveNavigationBarColor = Colors.grey;
+var activeNavigationItemColor = Color.fromARGB(255, 49, 197, 143);
+var notActiveNavigationItemColor = Color.fromARGB(255, 137, 137, 137);
+var activeNavigationLabelColor = Color.fromARGB(255, 49, 197, 143);
+var notActiveNavigationLabelColor = Color.fromARGB(255, 137, 137, 137);
+var appTitleColor = Color.fromARGB(255, 49, 197, 143);
+var lightGreenColor = Color.fromRGBO(233, 247, 242, 1);
+var textGreyColor = Color.fromRGBO(102, 102, 102, 1);
+var buttonGreenColor = Color.fromRGBO(52, 181, 135, 1);
+var hashtagColor = Color.fromRGBO(67, 171, 223, 1);
+var hashtagBackgroundColor = Color.fromRGBO(228, 240, 255, 1);
