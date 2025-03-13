@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/color.dart';
+import '../view/finder/screen/finder_coach.dart';
 import '../view_model/navigation_provider.dart';
 import 'button.dart';
 
@@ -265,3 +266,65 @@ class FlagAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+
+class FinderAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String? title;
+  final Color? backgroundColor;
+  final bool? fullscreenDialog;
+  final Function? onTap;
+  final List<Widget>? actions;
+  final bool? isLeading;
+  final Color? titleColor;
+
+  const FinderAppBar({
+    Key? key,
+    this.backgroundColor,
+    this.fullscreenDialog = false,
+    this.onTap,
+    this.actions,
+    this.isLeading = true,
+    this.titleColor,
+    this.title,
+  }) : super(key: key);
+
+  @override
+  Size get preferredSize => AppBar().preferredSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      backgroundColor: Colors.transparent, // AppBar 투명색
+      leading: isLeading!
+          ? IconButton(
+        icon: Image.asset('assets/back.png'),
+        onPressed: () => Navigator.of(context).pop(),
+      )
+          : null,
+      title: Text(
+        '$title',
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+          fontFamily: 'Pretendard',
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+      actions: actions ??
+          [
+            IconButton(
+              visualDensity: const VisualDensity(horizontal: -4.0, vertical: -4.0),
+              icon: Image.asset('assets/coach.png', width: 24, height: 24),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => FinderCoachMark()),
+                );
+              },
+            ),
+          ],
+    );
+  }
+}
+
+

@@ -15,20 +15,6 @@ import '../../../widget/size.dart';
 import '../../../widget/toast.dart';
 import '../widget/imageWithline.dart';
 
-// LoadingController Provider 정의
-final loadingControllerProvider = Provider<LoadingController>((ref) {
-  return LoadingController(ref);
-});
-
-final loadingProvider = StateProvider<bool>((ref) => false);
-
-class LoadingController {
-  final Ref ref;
-  LoadingController(this.ref);
-  bool get isLoading => ref.watch(loadingProvider);
-  set isLoading(bool value) => ref.read(loadingProvider.notifier).state = value;
-}
-
 class AimingResult extends ConsumerStatefulWidget {
   final String imagePath;
   final String distanceText;
